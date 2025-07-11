@@ -7,6 +7,11 @@
   --coffee-light: #cba27d;
 }
 
+/* ===== RESET GLOBAL ===== */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -14,6 +19,17 @@ body {
   color: var(--brown-dark);
 }
 
+/* ===== TIPOGRAFIA ===== */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+p, a, button {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 2rem;
+}
+
+/* ===== HEADER ===== */
 header {
   background: var(--white);
   display: flex;
@@ -22,32 +38,6 @@ header {
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-}
-
-.acoes-topo {
-  display: flex;
-  gap: 10px;
-}
-
-.btn-carrinho,
-.btn-login {
-  background: var(--brown-dark);
-  color: var(--white);
-  border: none;
-  padding: 0.6rem 0.8rem;
-  border-radius: 6px;
-  font-size: 1.2rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn-carrinho:hover,
-.btn-login:hover {
-  background: var(--brown-medium);
-  transform: scale(1.05);
 }
 
 .logo {
@@ -71,6 +61,94 @@ nav a {
   font-weight: bold;
 }
 
+.acoes-topo {
+  display: flex;
+  gap: 10px;
+}
+
+/* ===== BOTÕES GERAIS ===== */
+.btn, .btn-carrinho, .btn-login, .btn-voltar, .btn-adicionar, .btn-whatsapp, .perfil-editar button, .hero button, .sobre-texto .btn, .form-contato button {
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn {
+  background: var(--brown-dark);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.btn:hover,
+.btn-voltar:hover,
+.btn-carrinho:hover,
+.btn-login:hover,
+.btn-adicionar:hover,
+.perfil-editar button:hover,
+.hero button:hover,
+.sobre-texto .btn:hover,
+.form-contato button:hover {
+  background: var(--brown-medium);
+  transform: scale(1.05);
+}
+
+.btn-carrinho,
+.btn-login {
+  background: var(--brown-dark);
+  color: var(--white);
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-voltar {
+  background: #ccc;
+  color: var(--brown-dark);
+}
+
+.btn-voltar:hover {
+  background: #bbb;
+}
+
+.btn-adicionar {
+  background: var(--coffee-light);
+  color: var(--brown-dark);
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.btn-adicionar:hover {
+  background: #b8894e;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #25d366;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.btn-whatsapp i {
+  margin-right: 8px;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+/* ===== HERO ===== */
 .hero {
   text-align: center;
   padding: 4rem 2rem;
@@ -78,37 +156,28 @@ nav a {
   color: var(--brown-dark);
 }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-}
-
-p, a, button {
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 2rem;
-}
-
 .hero button {
   background: var(--brown-dark);
   color: var(--white);
-  border: none;
   padding: 1rem 2rem;
   border-radius: 4px;
-  cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.hero button:hover {
-  background: var(--brown-medium);
-  transform: scale(1.05);
-}
-
+/* ===== SECTION PADRÃO ===== */
 .section {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+/* ===== CARROSSEL ===== */
 .carrossel-container {
   position: relative;
   max-width: 1000px;
@@ -134,7 +203,8 @@ p, a, button {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-align: center;transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .produto:hover {
@@ -167,12 +237,10 @@ p, a, button {
   transform: translateY(-50%);
   background-color: var(--brown-dark);
   color: var(--white);
-  border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: 1.5rem;
   border-radius: 4px;
-  z-index: 10;
   opacity: 0.8;
   transition: opacity 0.3s, transform 0.3s;
 }
@@ -182,14 +250,10 @@ p, a, button {
   transform: translateY(-50%) scale(1.1);
 }
 
-.prev { 
-  left: 10px;
-}
+.prev { left: 10px; }
+.next { right: 10px; }
 
-.next { 
-  right: 10px;
-}
-
+/* ===== SOBRE ===== */
 .sobre {
   background-color: #fff8e1;
   color: #4e342e;
@@ -211,7 +275,6 @@ p, a, button {
 }
 
 .sobre-texto h2 {
-  font-family: 'Playfair Display', serif;
   font-size: 32px;
   margin-bottom: 20px;
 }
@@ -223,20 +286,9 @@ p, a, button {
 }
 
 .sobre-texto .btn {
-  background: var(--brown-dark);
-  color: var(--white);
-  border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 4px;
-  cursor: pointer;
   font-size: 1rem;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.sobre-texto .btn:hover {
-  background: var(--brown-medium);
-  transform: scale(1.05);
 }
 
 .sobre-imagem {
@@ -250,17 +302,12 @@ p, a, button {
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+/* ===== AVALIAÇÕES ===== */
 .avaliacoes {
   background-color: #fff8e1;
   color: #4e342e;
   padding: 60px 20px;
   text-align: center;
-}
-
-.avaliacoes h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  margin-bottom: 40px;
 }
 
 .cards-avaliacoes {
@@ -291,52 +338,17 @@ p, a, button {
   margin-bottom: 15px;
 }
 
-.card-avaliacao h3 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  margin: 10px 0;
-}
-
-.card-avaliacao p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
-
 .estrelas {
   color: #c9a86b;
   font-size: 18px;
 }
 
-footer {
-  background: var(--white);
-  padding: 2rem;
-  text-align: center;
-  font-size: 0.9rem;
-  margin-top: 4rem;
-}
-
-.btn {
-  background: var(--brown-dark);
-  color: var(--white);
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
+/* ===== CONTATO ===== */
 .contato {
   background-color: #fff8e1;
   color: #4e342e;
   padding: 60px 20px;
   text-align: center;
-}
-
-.contato h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  margin-bottom: 20px;
 }
 
 .info-contato {
@@ -360,20 +372,6 @@ footer {
   color: #c9a86b;
 }
 
-.item-contato span {
-  display: inline-block;
-}
-
-.item-contato a {
-  text-decoration: none;
-  color: #4e342e;
-  transition: color 0.3s ease;
-}
-
-.item-contato a:hover {
-  color: #a07d4f;
-}
-
 .form-contato {
   max-width: 600px;
   margin: 0 auto 30px;
@@ -383,12 +381,14 @@ footer {
 }
 
 .form-contato input,
-.form-contato textarea {
+.form-contato textarea,
+.form-contato select {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
+  background: #fff;
 }
 
 .form-contato textarea {
@@ -399,49 +399,65 @@ footer {
 .form-contato button {
   background-color: #c9a86b;
   color: #fff;
-  border: none;
   padding: 12px;
   border-radius: 6px;
-  cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease;
 }
 
 .form-contato button:hover {
   background-color: #a07d4f;
 }
 
-.form-contato h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  margin: 20px 0 10px 0;
-  color: var(--brown-dark);
+/* ===== PERFIL ===== */
+.perfil-section {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  padding: 2rem;
+  background: var(--beige-card);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.btn-whatsapp {
-  display: inline-block;
-  background-color: #25d366;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-size: 16px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+.perfil-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
 }
 
-.btn-whatsapp i {
-  margin-right: 8px;
+.perfil-info {
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: center;
 }
 
-.btn-whatsapp:hover {
-  background-color: #1ebe57;
+.perfil-foto {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-#contato button:hover {
-  background: var(--brown-medium);
-  transform: scale(1.05);
+.perfil-editar {
+  flex: 1 1 400px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
+/* ===== FOOTER ===== */
+footer {
+  background: var(--white);
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+
+/* ===== BOTÃO TOPO ===== */
 .btn-topo {
   position: fixed;
   bottom: 30px;
@@ -459,112 +475,15 @@ footer {
   display: block;
 }
 
-.form-contato select {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  background: #fff;
-}
-
-.section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-}
-
-.resumo-pedido {
-  background: var(--beige-card);
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.resumo-pedido h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 10px;
-}
-
-.resumo-pedido ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 10px 0;
-}
-
-.resumo-pedido li {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.resumo-pedido p {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.section form {
-  background: var(--beige-card);
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.section p {
-  text-align: center;
-}
-
-.btn:hover {
-  background: var(--brown-medium);
-  transform: scale(1.05);
-}
-
-.botoes-checkout {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.btn-voltar {
-  background: #ccc;
-  color: var(--brown-dark);
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn-voltar:hover {
-  background: #bbb;
-  transform: scale(1.05);
-}
-
-.btn-carrinho {
-  background: var(--brown-dark);
-  color: var(--white);
-  border: none;
-  padding: 0.8rem 1rem;
-  border-radius: 4px;
-  font-size: 1.2rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn-carrinho:hover {
-  background: var(--brown-medium);
-  transform: scale(1.1);
-}
-
-
-html {
-  scroll-behavior: smooth;
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 700px) {
+  .perfil-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .perfil-info, .perfil-editar {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 600px) {

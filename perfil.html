@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil - Flavored Café</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <i class="fas fa-mug-hot"></i> Flavored Café
+  </div>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="perfil.html" class="active">Perfil</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="login.html">Logout</a>
+  </nav>
+</header>
+
+<section class="section perfil-section">
+  <h2>Meu Perfil</h2>
+
+  <div class="perfil-container">
+
+    <div class="perfil-info">
+      <img src="images/user-placeholder.png" alt="Foto do usuário" class="perfil-foto" />
+      <h3>Nome do Usuário</h3>
+      <p><strong>Email:</strong> usuario@email.com</p>
+      <p><strong>Telefone:</strong> (00) 90000-0000</p>
+      <p><strong>Endereço:</strong> Rua do Café, 123, Centro, Cidade Fictícia</p>
+    </div>
+
+    <form class="form-contato perfil-editar">
+      <h3>Editar Informações</h3>
+      <input type="text" name="nome" placeholder="Nome completo" />
+      <input type="email" name="email" placeholder="Email" />
+      <input type="tel" name="telefone" placeholder="Telefone" />
+      <input type="text" name="endereco" placeholder="Endereço" />
+
+      <button type="submit" class="btn">Salvar Alterações</button>
+    </form>
+
+  </div>
+</section>
+
+<footer>
+  <p>Flavored Café - Comece seu dia com algo especial.</p>
+  <p>© 2025 Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

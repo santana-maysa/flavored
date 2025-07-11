@@ -36,7 +36,6 @@ function verificarHorario() {
 
 verificarHorario();
 
-
 const btnTopo = document.querySelector('.btn-topo');
 window.addEventListener('scroll', () => {
   btnTopo.classList.toggle('show', window.scrollY > 300);
