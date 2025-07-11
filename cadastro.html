@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro | Flavored Café</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <i class="fas fa-mug-hot"></i> Flavored Café
+    </div>
+  </header>
+
+  <section class="section">
+  <h2>Cadastro</h2>
+
+  <form class="form-contato">
+    <input type="text" name="nome" placeholder="Nome completo" required />
+    <input type="email" name="email" placeholder="E-mail" required />
+    <input type="password" name="senha" placeholder="Senha" required />
+
+    <h3>Endereço</h3>
+    <input type="text" name="cep" placeholder="CEP" required />
+    <input type="text" name="rua" placeholder="Rua" required />
+    <input type="text" name="numero" placeholder="Número" required />
+    <input type="text" name="complemento" placeholder="Complemento" />
+    <input type="text" name="bairro" placeholder="Bairro" required />
+    <input type="text" name="cidade" placeholder="Cidade" required />
+    <input type="text" name="estado" placeholder="Estado" required />
+
+    <button type="submit" class="btn">Cadastrar</button>
+
+    <p>Já tem conta? <a href="login.html">Faça login</a></p>
+  </form>
+</section>
+
+
+  <footer>
+    <p>Flavored Café - Comece seu dia com algo especial.</p>
+    <p>© 2025 Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | Flavored Café</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <i class="fas fa-mug-hot"></i> Flavored Café
+    </div>
+  </header>
+
+  <section class="section">
+     <p id="status-cafe"></p>
+    <h2>Finalizar Pedido</h2>
+
+    <div class="resumo-pedido">
+      <h3>Resumo do Pedido</h3>
+      <ul>
+        <li>1x Cappuccino - R$ 2,90</li>
+        <li>1x Latte - R$ 3,50</li>
+      </ul>
+      <p><strong>Total: R$ 6,40</strong></p>
+    </div>
+
+    <form class="form-contato">
+      <input type="text" name="nome" placeholder="Nome completo" required />
+      <input type="text" name="endereco" placeholder="Endereço de entrega" required />
+      <input type="tel" name="telefone" placeholder="Telefone" required />
+
+      <select name="pagamento" required>
+        <option value="">Selecione o método de pagamento</option>
+        <option value="pix">Pix</option>
+        <option value="cartao">Cartão de Crédito</option>
+        <option value="dinheiro">Dinheiro</option>
+      </select>
+
+      <div class="botoes-checkout">
+        <button type="button" class="btn btn-voltar" onclick="window.history.back();">Voltar</button>
+        <button type="submit" class="btn">Confirmar Pedido</button>
+    </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>Flavored Café - Comece seu dia com algo especial.</p>
+    <p>© 2025 Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

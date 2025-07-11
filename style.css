@@ -24,6 +24,32 @@ header {
   top: 0;
 }
 
+.acoes-topo {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-carrinho,
+.btn-login {
+  background: var(--brown-dark);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-carrinho:hover,
+.btn-login:hover {
+  background: var(--brown-medium);
+  transform: scale(1.05);
+}
+
 .logo {
   font-family: 'Yeseva One', cursive;
   font-size: 24px;
@@ -282,7 +308,6 @@ p, a, button {
   font-size: 18px;
 }
 
-
 footer {
   background: var(--white);
   padding: 2rem;
@@ -386,6 +411,13 @@ footer {
   background-color: #a07d4f;
 }
 
+.form-contato h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin: 20px 0 10px 0;
+  color: var(--brown-dark);
+}
+
 .btn-whatsapp {
   display: inline-block;
   background-color: #25d366;
@@ -408,6 +440,131 @@ footer {
 #contato button:hover {
   background: var(--brown-medium);
   transform: scale(1.05);
+}
+
+.btn-topo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--brown-dark);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  display: none;
+  z-index: 1000;
+}
+
+.btn-topo.show {
+  display: block;
+}
+
+.form-contato select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background: #fff;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+}
+
+.resumo-pedido {
+  background: var(--beige-card);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.resumo-pedido h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.resumo-pedido ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.resumo-pedido li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.resumo-pedido p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.section form {
+  background: var(--beige-card);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.section p {
+  text-align: center;
+}
+
+.btn:hover {
+  background: var(--brown-medium);
+  transform: scale(1.05);
+}
+
+.botoes-checkout {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-voltar {
+  background: #ccc;
+  color: var(--brown-dark);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-voltar:hover {
+  background: #bbb;
+  transform: scale(1.05);
+}
+
+.btn-carrinho {
+  background: var(--brown-dark);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-carrinho:hover {
+  background: var(--brown-medium);
+  transform: scale(1.1);
+}
+
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 600px) {
